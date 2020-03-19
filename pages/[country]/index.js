@@ -29,6 +29,7 @@ export default CountryShows;*/
 import axios from "axios";
 import Error from "next/error";
 
+import Header from "../../components/Header.jsx";
 import Thumbnail from "../../components/Thumbnail.jsx";
 
 const CountryShows = ({ shows = [], country, statusCode }) => {
@@ -40,6 +41,7 @@ const CountryShows = ({ shows = [], country, statusCode }) => {
 
     return (
         <div>
+            <Header/>
             <p>Country Shows</p>
             { shows.map((showItem, index) => {
                 const { show } = showItem;
