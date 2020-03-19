@@ -1,4 +1,4 @@
-//import Router from "next/router";
+import Router from "next/router";
 
 const Home = () => {
   return (
@@ -6,13 +6,13 @@ const Home = () => {
   );
 };
 
-/*Home.getInitialProps = ({ res }) => {
+Home.getInitialProps = ({ res }) => {
   if (process.browser) { // client side redirect
-    Router.push(`/tr`);
+    Router.push("/[country]", "/us");
   } else { // server side redirect
     if (res) {
       res.writeHead(301, {
-        Location: "/tr"
+        Location: "/us"
       });
 
       res.end();
@@ -20,6 +20,6 @@ const Home = () => {
   }
 
   return {};
-};*/
+};
 
 export default Home;
